@@ -1,12 +1,12 @@
 pipeline {
   agent {
-    dockerfile {
-      filename 'Dockerfile'
+    docker {
+      image 'docker'
     }
 
   }
   stages {
-    stage('') {
+    stage('error') {
       steps {
         sh 'docker build -t gitlab.dlvn.ai/springboot/demo1:${BUILD_ID} .'
       }
