@@ -15,7 +15,7 @@ jobs:
     steps:
     - id: timestamp
       #run: echo "::set-output name=timestamp::$(timestamp +%s)"
-      run: echo "timestamp=$(timestamp +%s)" >> $GITHUB_STATE
+      run: echo "timestamp=$(date +%d%m%y%H%M)" >> $GITHUB_STATE
 
     - name: Restore the previous run result
       uses: actions/cache@v2
